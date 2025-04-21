@@ -1,0 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+<form method="POST" class="modal-content">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn submit">Update</button>
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+</form>
+
